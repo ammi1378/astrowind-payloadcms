@@ -27,8 +27,12 @@
         "./src/*"
       ],
       "@payload-config": [
-        "./src/payload.config.ts"
-      ]
+        "./src/modules/core/payload/payload.config.ts"
+      ],
+      "@payload-types": [
+        "./src/modules/core/payload/payload-types.ts"
+      ],
+      
     }
   },
   "include": [
