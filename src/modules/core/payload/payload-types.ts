@@ -87,16 +87,6 @@ export interface Media {
 export interface Page {
   id: string;
   title: string;
-  link: {
-    type?: ('reference' | 'custom') | null;
-    newTab?: boolean | null;
-    reference?: {
-      relationTo: 'pages';
-      value: string | Page;
-    } | null;
-    url?: string | null;
-    label: string;
-  };
   layout: HeroBlock[];
   publishedAt?: string | null;
   slug?: string | null;
@@ -139,6 +129,22 @@ export interface HeroBlock {
     };
     [k: string]: unknown;
   };
+  links?:
+    | {
+        link: {
+          type?: ('reference' | 'custom') | null;
+          newTab?: boolean | null;
+          reference?: {
+            relationTo: 'pages';
+            value: string | Page;
+          } | null;
+          url?: string | null;
+          label: string;
+          appearance?: ('default' | 'primary' | 'secondary') | null;
+        };
+        id?: string | null;
+      }[]
+    | null;
   id?: string | null;
   blockName?: string | null;
   blockType: 'HeroBlock';

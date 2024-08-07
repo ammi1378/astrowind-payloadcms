@@ -6,7 +6,6 @@ import { slugField } from "@/modules/common/models/slug";
 import { populatePublishedAt } from "@/modules/shared/hooks/populatePublishedAt";
 import { revalidatePage } from "./hooks/revalidatePage";
 import { HeroBlockModel } from "@/modules/common/blocks/Hero/model";
-import { linkResult } from "@/modules/common/link";
 export const Pages: CollectionConfig = {
   slug: "pages",
   access: {
@@ -26,7 +25,6 @@ export const Pages: CollectionConfig = {
       tabs: [
         {
           fields: [
-            linkResult,
             {
               name: "layout",
               type: "blocks",

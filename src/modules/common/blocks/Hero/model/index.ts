@@ -4,6 +4,7 @@ import {
   lexicalEditor,
 } from "@payloadcms/richtext-lexical";
 import type { Block } from "payload";
+import linkGroup from "../../links/model/linkGroup";
 
 export const HeroBlockModel: Block = {
   slug: "HeroBlock",
@@ -39,6 +40,7 @@ export const HeroBlockModel: Block = {
         },
       }),
     },
+    linkGroup()
   ],
   interfaceName: "HeroBlock",
 };
